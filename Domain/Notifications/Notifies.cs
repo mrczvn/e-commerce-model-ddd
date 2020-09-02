@@ -14,7 +14,7 @@ namespace Domain.Notifications
         public string PropertyName { get; set; }
 
         [NotMapped]
-        public string messsage { get; set; }
+        public string message { get; set; }
 
         [NotMapped]
         public List<Notifies> Notifications;
@@ -23,7 +23,18 @@ namespace Domain.Notifications
         {
             if (string.IsNullOrWhiteSpace(value) || string.IsNullOrWhiteSpace(propertyName))
             {
-                Notifications.Add(new Notifies { messsage = "Campo Obrigátorio", PropertyName = propertyName });
+                Notifications.Add(new Notifies { message = "Campo Obrigátorio", PropertyName = propertyName });
+
+                return false;
+            }
+            return true;
+        }
+
+        public bool ValidateIntProperty(int value, string propertyName)
+        {
+            if (value < 1 || string.IsNullOrWhiteSpace(propertyName))
+            {
+                Notifications.Add(new Notifies { message = "Valor deve ser maior que 0", PropertyName = propertyName });
 
                 return false;
             }
