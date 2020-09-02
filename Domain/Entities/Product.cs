@@ -14,5 +14,9 @@ namespace Domain.Entities
         [Column("PRD_NOME")]
         [Display(Name = "Nome")]
         public string Name { get; set; }
+
+        [Column("PRD_VALO")]
+        [Display(Name = "Valor")]
+        public decimal Value { get; set; }
     }
 }
