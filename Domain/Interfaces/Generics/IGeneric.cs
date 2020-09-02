@@ -1,4 +1,5 @@
-﻿using System.Threading.Tasks;
+﻿using System.Collections.Generic;
+using System.Threading.Tasks;
 
 namespace Domain.Interfaces.Generics
 {
@@ -11,5 +12,7 @@ namespace Domain.Interfaces.Generics
         Task Delete(TEntity Obj);
 
         Task<TEntity> GetEntityById(int Id);
+
+        Task<List<TEntity>> List();
     }
 }
