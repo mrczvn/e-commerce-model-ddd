@@ -15,9 +15,16 @@ namespace Domain.Services
             _IProduct = IProduct;
         }
 
-        public Task AddProduct(Product product)
+        public async Task AddProduct(Product product)
         {
-            throw new NotImplementedException();
+            var validateName = product.ValidateStringProperty(product.Name, "Nome");
+            var validateValue = product.ValidateDecimalProperty(product.Value, "Valor");
+
+            if (validateName && validateValue)
+            {
+                product.Status = true;
+                await _IProduct.Add(product);
+            }
         }
 
         public Task UpdateProduct(Product product)
