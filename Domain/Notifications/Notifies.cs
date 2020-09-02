@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations.Schema;
+﻿using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Domain.Notifications
 {
@@ -13,5 +14,8 @@ namespace Domain.Notifications
 
         [NotMapped]
         public int messsage { get; set; }
+
+        [NotMapped]
+        public List<Notifies> Notifications;
     }
 }
