@@ -40,5 +40,16 @@ namespace Domain.Notifications
             }
             return true;
         }
+
+        public bool ValidateDecimalProperty(decimal value, string propertyName)
+        {
+            if (value < 1 || string.IsNullOrWhiteSpace(propertyName))
+            {
+                Notifications.Add(new Notifies { message = "Valor deve ser maior que 0", PropertyName = propertyName });
+
+                return false;
+            }
+            return true;
+        }
     }
 }
