@@ -8,7 +8,7 @@
     <Folder Include="Entities\" />
     <Folder Include="Interfaces\Generics\" />
     <Folder Include="Interfaces\InterfaceProduct\" />
-    <Folder Include="Interfaces\InterfaceClient\" />
+    <Folder Include="Interfaces\InterfaceServices\" />
   </ItemGroup>
 
 </Project>
