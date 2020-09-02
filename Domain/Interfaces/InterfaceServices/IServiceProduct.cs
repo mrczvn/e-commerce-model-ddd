@@ -6,5 +6,7 @@ namespace Domain.Interfaces.InterfaceServices
     public interface IServiceProduct
     {
         Task AddProduct(Product product);
+
+        Task UpdateProduct(Product product);
     }
 }
