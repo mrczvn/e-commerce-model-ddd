@@ -18,5 +18,9 @@ namespace Domain.Entities
         [Column("PRD_VALO")]
         [Display(Name = "Valor")]
         public decimal Value { get; set; }
+
+        [Column("PRD_ESTADO")]
+        [Display(Name = "Estado")]
+        public bool Status { get; set; }
     }
 }
