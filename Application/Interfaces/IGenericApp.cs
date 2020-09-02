@@ -9,5 +9,7 @@ namespace Application.Interfaces
         Task Update(TEntity Obj);
 
         Task Delete(TEntity Obj);
+
+        Task<TEntity> GetEntityById(int Id);
     }
 }
