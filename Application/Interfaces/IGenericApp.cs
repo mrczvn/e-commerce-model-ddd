@@ -5,5 +5,7 @@ namespace Application.Interfaces
     public interface IGenericApp<TEntity> where : class
     {
         Task Add(TEntity Obj);
+
+        Task Update(TEntity Obj);
     }
 }
