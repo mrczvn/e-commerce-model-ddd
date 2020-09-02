@@ -1,7 +1,6 @@
 ﻿using Domain.Entities;
 using Domain.Interfaces.InterfaceProduct;
 using Domain.Interfaces.InterfaceServices;
-using System;
 using System.Threading.Tasks;
 
 namespace Domain.Services
@@ -27,9 +26,15 @@ namespace Domain.Services
             }
         }
 
-        public Task UpdateProduct(Product product)
+        public async Task UpdateProduct(Product product)
         {
-            throw new NotImplementedException();
+            var validateName = product.ValidateStringProperty(product.Name, "Nome");
+            var validateValue = product.ValidateDecimalProperty(product.Value, "Valor");
+
+            if (validateName && validateValue)
+            {
+                await _IProduct.Update(product);
+            }
         }
     }
 }
