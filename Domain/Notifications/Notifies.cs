@@ -7,6 +7,7 @@ namespace Domain.Notifications
     {
         public Notifies()
         {
+            Notifications = new List<Notifies>();
         }
 
         [NotMapped]
