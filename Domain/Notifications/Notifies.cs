@@ -10,5 +10,8 @@ namespace Domain.Notifications
 
         [NotMapped]
         public string PropertyName { get; set; }
+
+        [NotMapped]
+        public int messsage { get; set; }
     }
 }
