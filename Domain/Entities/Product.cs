@@ -10,5 +10,9 @@ namespace Domain.Entities
         [Column("PRD_ID")]
         [Display(Name = "Código")]
         public int Id { get; set; }
+
+        [Column("PRD_NOME")]
+        [Display(Name = "Nome")]
+        public string Name { get; set; }
     }
 }
