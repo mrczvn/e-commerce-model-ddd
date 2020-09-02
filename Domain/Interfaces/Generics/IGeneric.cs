@@ -7,5 +7,7 @@ namespace Domain.Interfaces.Generics
         Task Add(TEntity Obj);
 
         Task Update(TEntity Obj);
+
+        Task Delete(TEntity Obj);
     }
 }
