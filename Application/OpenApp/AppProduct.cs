@@ -46,9 +46,11 @@ namespace Application.OpenApp
             return productById;
         }
 
-        public Task<List<Product>> List()
+        public async Task<List<Product>> List()
         {
-            throw new NotImplementedException();
+            var products = await _IProduct.List();
+
+            return products;
         }
 
         public Task Update(Product Obj)
