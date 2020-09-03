@@ -34,9 +34,9 @@ namespace Application.OpenApp
             await _IProduct.Add(Obj);
         }
 
-        public Task Delete(Product Obj)
+        public async Task Delete(Product Obj)
         {
-            throw new NotImplementedException();
+            await _IProduct.Delete(Obj);
         }
 
         public Task<Product> GetEntityById(int Id)
