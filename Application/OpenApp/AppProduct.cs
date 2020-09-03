@@ -19,9 +19,9 @@ namespace Application.OpenApp
             _IServiceProduct = IServiceProduct;
         }
 
-        public Task AddProduct(Product product)
+        public async Task AddProduct(Product product)
         {
-            throw new NotImplementedException();
+            await _IServiceProduct.AddProduct(product);
         }
 
         public Task UpdateProduct(Product product)
