@@ -39,9 +39,11 @@ namespace Application.OpenApp
             await _IProduct.Delete(Obj);
         }
 
-        public Task<Product> GetEntityById(int Id)
+        public async Task<Product> GetEntityById(int Id)
         {
-            throw new NotImplementedException();
+            var productById = await _IProduct.GetEntityById(Id);
+
+            return productById;
         }
 
         public Task<List<Product>> List()
