@@ -3,7 +3,7 @@ using System.Threading.Tasks;
 
 namespace Application.Interfaces
 {
-    public interface IGenericApp<TEntity> where : class
+    public interface IGenericApp<TEntity> where TEntity : class
     {
         Task Add(TEntity Obj);
 
