@@ -32,9 +32,11 @@ namespace Infrastructure.Repository.Generics
             await data.SaveChangesAsync();
         }
 
-        public Task<TEntity> GetEntityById(int Id)
+        public async Task<TEntity> GetEntityById(int Id)
         {
-            throw new NotImplementedException();
+            using ContextBase data = new ContextBase(_OptionsBuilder);
+            var entity = await data.Set<TEntity>().FindAsync(Id);
+            return entity;
         }
 
         public Task<List<TEntity>> List()
