@@ -11,10 +11,12 @@ namespace Infrastructure.Configuration
 
         public DbSet<Product> Product { get; set; }
 
-        protected override void onConfiguring(DbContextOptionsBuilder optionsBuilder)
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             if (!optionsBuilder.IsConfigured)
             {
+                optionsBuilder.UseSqlServer(string.Empty);
+                base.OnConfiguring(optionsBuilder);
             }
         }
     }
