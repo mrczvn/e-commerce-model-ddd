@@ -6,3 +6,7 @@ C:\Users\marvn\projects\c#\ecommerceDDD\Application\obj\Debug\netcoreapp3.1\Appl
 C:\Users\marvn\projects\c#\ecommerceDDD\Application\obj\Debug\netcoreapp3.1\Application.csproj.CoreCompileInputs.cache
 C:\Users\marvn\projects\c#\ecommerceDDD\Application\obj\Debug\netcoreapp3.1\Application.dll
 C:\Users\marvn\projects\c#\ecommerceDDD\Application\obj\Debug\netcoreapp3.1\Application.pdb
+C:\Users\marvn\projects\c#\ecommerceDDD\Application\bin\Debug\netcoreapp3.1\Domain.dll
+C:\Users\marvn\projects\c#\ecommerceDDD\Application\bin\Debug\netcoreapp3.1\Domain.pdb
+C:\Users\marvn\projects\c#\ecommerceDDD\Application\obj\Debug\netcoreapp3.1\Application.csprojAssemblyReference.cache
+C:\Users\marvn\projects\c#\ecommerceDDD\Application\obj\Debug\netcoreapp3.1\Application.csproj.CopyComplete
