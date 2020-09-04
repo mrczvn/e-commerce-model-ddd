@@ -2,7 +2,6 @@
 using Domain.Entities;
 using Domain.Interfaces.InterfaceProduct;
 using Domain.Interfaces.InterfaceServices;
-using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
@@ -53,9 +52,9 @@ namespace Application.OpenApp
             return products;
         }
 
-        public Task Update(Product Obj)
+        public async Task Update(Product Obj)
         {
-            throw new NotImplementedException();
+            await _IProduct.Update(Obj);
         }
     }
 }
