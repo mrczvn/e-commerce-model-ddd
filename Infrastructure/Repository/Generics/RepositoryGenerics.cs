@@ -46,9 +46,11 @@ namespace Infrastructure.Repository.Generics
             return listOfEntitys;
         }
 
-        public Task Update(TEntity Obj)
+        public async Task Update(TEntity Obj)
         {
-            throw new NotImplementedException();
+            using ContextBase data = new ContextBase(_OptionsBuilder);
+            data.Set<TEntity>().Update(Obj);
+            await data.SaveChangesAsync();
         }
 
         #region Disposed https://docs.microsoft.com/pt-br/dotnet/standard/garbage-collection/implementing-dispose
