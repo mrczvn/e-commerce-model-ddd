@@ -20,14 +20,16 @@ namespace Infrastructure.Repository.Generics
 
         public async Task Add(TEntity Obj)
         {
-            using var data = new ContextBase(_OptionsBuilder);
+            using ContextBase data = new ContextBase(_OptionsBuilder);
             await data.Set<TEntity>().AddAsync(Obj);
             await data.SaveChangesAsync();
         }
 
-        public Task Delete(TEntity Obj)
+        public async Task Delete(TEntity Obj)
         {
-            throw new NotImplementedException();
+            using ContextBase data = new ContextBase(_OptionsBuilder);
+            data.Set<TEntity>().Remove(Obj);
+            await data.SaveChangesAsync();
         }
 
         public Task<TEntity> GetEntityById(int Id)
