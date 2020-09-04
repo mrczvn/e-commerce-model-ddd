@@ -6,3 +6,6 @@ C:\Users\marvn\projects\c#\ecommerceDDD\Infrastructure\obj\Debug\netcoreapp3.1\I
 C:\Users\marvn\projects\c#\ecommerceDDD\Infrastructure\obj\Debug\netcoreapp3.1\Infrastructure.AssemblyInfo.cs
 C:\Users\marvn\projects\c#\ecommerceDDD\Infrastructure\obj\Debug\netcoreapp3.1\Infrastructure.dll
 C:\Users\marvn\projects\c#\ecommerceDDD\Infrastructure\obj\Debug\netcoreapp3.1\Infrastructure.pdb
+C:\Users\marvn\projects\c#\ecommerceDDD\Infrastructure\bin\Debug\netcoreapp3.1\Domain.dll
+C:\Users\marvn\projects\c#\ecommerceDDD\Infrastructure\bin\Debug\netcoreapp3.1\Domain.pdb
+C:\Users\marvn\projects\c#\ecommerceDDD\Infrastructure\obj\Debug\netcoreapp3.1\Infrastructure.csproj.CopyComplete

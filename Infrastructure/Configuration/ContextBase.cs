@@ -10,5 +10,12 @@ namespace Infrastructure.Configuration
         }
 
         public DbSet<Product> Product { get; set; }
+
+        protected override void onConfiguring(DbContextOptionsBuilder optionsBuilder)
+        {
+            if (!optionsBuilder.IsConfigured)
+            {
+            }
+        }
     }
 }
