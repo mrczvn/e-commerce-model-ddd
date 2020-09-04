@@ -18,9 +18,11 @@ namespace Infrastructure.Repository.Generics
             _OptionsBuilder = new DbContextOptions<ContextBase>();
         }
 
-        public Task Add(TEntity Obj)
+        public async Task Add(TEntity Obj)
         {
-            throw new NotImplementedException();
+            using var data = new ContextBase(_OptionsBuilder);
+            await data.Set<TEntity>().AddAsync(Obj);
+            await data.SaveChangesAsync();
         }
 
         public Task Delete(TEntity Obj)
