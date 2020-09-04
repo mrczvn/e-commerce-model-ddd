@@ -39,9 +39,11 @@ namespace Infrastructure.Repository.Generics
             return entity;
         }
 
-        public Task<List<TEntity>> List()
+        public async Task<List<TEntity>> List()
         {
-            throw new NotImplementedException();
+            using ContextBase data = new ContextBase(_OptionsBuilder);
+            var listOfEntitys = await data.Set<TEntity>().AsNoTracking().ToListAsync();
+            return listOfEntitys;
         }
 
         public Task Update(TEntity Obj)
