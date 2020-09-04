@@ -1,4 +1,6 @@
 ﻿using Domain.Interfaces.Generics;
+using Infrastructure.Configuration;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Win32.SafeHandles;
 using System;
 using System.Collections.Generic;
@@ -9,6 +11,13 @@ namespace Infrastructure.Repository.Generics
 {
     public class RepositoryGenerics<TEntity> : IGeneric<TEntity>, IDisposable where TEntity : class
     {
+        private readonly DbContextOptions<ContextBase> _OptionsBuilder;
+
+        public RepositoryGenerics()
+        {
+            _OptionsBuilder = new DbContextOptions<ContextBase>();
+        }
+
         public Task Add(TEntity Obj)
         {
             throw new NotImplementedException();
@@ -34,6 +43,8 @@ namespace Infrastructure.Repository.Generics
             throw new NotImplementedException();
         }
 
+        #region Disposed https://docs.microsoft.com/pt-br/dotnet/standard/garbage-collection/implementing-dispose
+
         private bool _disposed = false;
         private SafeHandle _safeHandle = new SafeFileHandle(IntPtr.Zero, true);
 
@@ -51,5 +62,7 @@ namespace Infrastructure.Repository.Generics
             }
             _disposed = true;
         }
+
+        #endregion Disposed https://docs.microsoft.com/pt-br/dotnet/standard/garbage-collection/implementing-dispose
     }
 }
